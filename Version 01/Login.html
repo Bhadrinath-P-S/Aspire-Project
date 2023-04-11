@@ -1,0 +1,157 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3172/3172555.png" type="image/x-icon">
+</head>
+
+<style>
+
+  .BUTTON {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgba(250, 3, 3, 0.491);
+    cursor: pointer;
+  }
+
+  .BUTTON:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+  fieldset {
+    box-shadow: 0 6px 10px 0 rgba(241, 8, 8, 0.269), 0 8px 22px 0 rgba(211, 9, 9, 0.26);
+    border-radius: 5%;
+    height: 310px;
+    width: 25%;
+    background-color: rgba(14, 10, 10, 0.655);
+    display: block;
+  }
+
+  .forgotpass {
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: wheat;
+  }
+
+  .forgotpass:hover {
+    color: red;
+    text-decoration: underline;
+  }
+
+  #email_error,
+  #password_error {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgb(194, 227, 27);
+    display: none;
+    margin-top: 3px;
+    border-radius: 3px;
+    width: 45%;
+    padding-left: 10px;
+  }
+  
+</style>
+
+  <body background="https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg">
+
+  <header style="background-color: Red; height: 100px; width: 100%; Padding-top: 5px">
+
+    <center><strong>
+        <h2 style="font-size:35px; color:Black;">MOVIE GRIP</h2>
+      </strong></center>
+
+    <marquee><strong>
+        <h11 style="color:White; ">Grab The Movies You Want !!!</h11>
+      </strong></marquee>
+      <hr style="position: relative; top: -8px;">
+
+    <form id="form" action="Movie Now Showing.html" method="post" onsubmit="return validated()" 
+    style="margin-top: 100px;">
+      <center>
+        <fieldset>
+          <legend>
+            <h1 style="color:White;">WELCOME</h1>
+          </legend>
+
+          
+          <label for="Email">
+            <h10 style="color:White;">Email</h10>
+          </label><br>
+          <i style="position: relative; color: black; left: 25px; top: 1.5px;" class="fa fa-user"></i>
+          <input autocomplete="off" type="email" name="email" placeholder=" Enter Your Email"
+            style="border-radius: 6px; height:25px; width:210px; padding-left: 25px;"><br>
+          <div id="email_error">
+            Please fill up your email</div>
+
+          <label for="Password">
+            <h10 style="color:White;">Password</h10>
+          </label><br>
+          <i style="position: relative; color: black; left: 25px; top: 1.5px;" class="fa fa-lock"></i>
+          <input type="password" name="password" placeholder=" Enter Your Password"
+            style=" border-radius: 6px; height:25px; width:210px; padding-left: 25px;"><br>
+          <div id="password_error">
+            Please fill up your password
+          </div>
+
+          <button class="BUTTON" onsubmit="return Login()"
+            style="border-radius: 6px; height: 25; width: 60; margin-top: 13px;" value="Login">Login</button><br>
+    </form>
+
+    <a href="#" class="forgotpass"> Forgot Password? </a>
+    <hr style="position: relative; bottom: -4%; color: white; border-radius: 100px;">
+
+    <label for="Signup">
+      <h9 style="color:White; position: relative; bottom: -11;">Don't have an account ?</h9> &nbsp;
+    </label>
+
+    <a href="file:///F:/BADHRI/Aspire%20Tasks/HTML%20&%20CSS/Movie%20Ticket%20Booking/Registration%20Page.html">
+      <input type="button" class="BUTTON"
+        style="border-radius: 6px; height: 25; width: 65; position: relative; bottom: -11;" value="Register">
+    </a>
+
+    </fieldset>
+    </center>
+
+    <script>
+      var email = document.forms['form']['email'];
+      var password = document.forms['form']['password'];
+
+      var email_error = document.getElementById('email_error');
+      var password_error = document.getElementById('password_error');
+
+      email.addEventListener('textInput', email_Verify);
+      password.addEventListener('textInput', password_Verify);
+
+      function validated() {
+        if (email.value.length < 9) {
+          email_error.style.display = "block";
+          email.focus();
+          return false;
+        }
+        if (password.value.length < 6) {
+          password_error.style.display = "block";
+          password.focus();
+          return false;
+        }
+        else{
+          alert("Login successful !!");
+        }
+      }
+      function email_Verify() {
+        if (email.value.length >= 8) {
+          email_error.style.display = "none";
+        }
+      }
+      function password_Verify() {
+        if (password.value.length >= 6) {
+          password_error.style.display = "none";
+        }
+      }
+    </script>
+
+  </body>
+</html>
