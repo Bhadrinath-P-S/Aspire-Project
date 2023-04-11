@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(rgba(1, 1, 46, 0.826), rgb(0, 0, 0)),
+    url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-netflix-animation-index-1585754615.jpg?crop=1.00xw:0.668xh;0,0&resize=1200:*");
+  background-size: 100%;
+  color: #fff;
+  background-color: red;
+  padding-top: 10px;
+}
+
+.movie-container {
+  margin-top: 10px;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-left: 10px;
+  padding: 5px 12px;
+}
+
+.movie-container label {
+  border-radius: 5px;
+  font-size: 17px;
+  margin-left: 36.5%;
+  padding: 6px 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-na {
+  width: 30px;
+  height: 25px;
+  margin: 0.5rem;
+  border-radius: 9px 9px 0px 0px;
+  background-color: #2196f3;
+}
+
+.seat-s {
+  width: 30px;
+  height: 25px;
+  margin: 0.5rem;
+  border-radius: 9px 9px 0px 0px;
+  background-color: red;
+}
+
+.seat-o {
+  width: 30px;
+  height: 25px;
+  margin: 0.5rem;
+  border-radius: 9px 9px 0px 0px;
+  background-color: whitesmoke;
+}
+
+.showcase {
+  background-color: rgba(0, 0, 0, 0.445);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 21%;
+  position: relative;
+  left: 39.5%;
+  margin-top: 20px;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 0px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.movie-screen {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.movie-screen img {
+  width: 520px;
+  height: 135px;
+  margin-top: -43px;
+  margin-bottom: -20px;
+}
+
+.subtitle {
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px;
+  color: #31d7a9;
+  font-size: 16px;
+  max-width: 270px;
+  margin: 13px 0px 4px 0px;
+}
+
+.subtitle:before,
+.subtitle:after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 1px;
+  background: #213a69;
+}
+
+.subtitle:before {
+  width: 80%;
+  top: 0;
+}
+
+.subtitle:after {
+  width: 100%;
+  bottom: 0;
+}
+
+
+/* movie-seat-booking.component.css */
+
+h1 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.seat-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 32px;
+  margin: 0.5rem;
+  border-radius: 15px 15px 0px 0px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.seat.available {
+  background-color: #2196f3;
+}
+
+.seat.selected {
+  background-color: #f04e4e;
+}
+
+.seat.reserved {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+.seat.occupied {
+  background-color: #ffffff;
+  /* cursor: not-allowed; */
+}
+
+.submit-button, .payment-button {
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 14;
+  border: 1px solid rgba(13, 9, 0, 0.491);
+  cursor: pointer;
+  margin: 1rem auto;
+  color: black;
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  margin-left: 40%;
+}
+
+
+.submit-button:hover {
+  background-color: #f44336;
+  color: white;
+}
+

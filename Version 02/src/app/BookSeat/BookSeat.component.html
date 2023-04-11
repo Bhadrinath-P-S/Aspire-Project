@@ -1,0 +1,59 @@
+<head>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3172/3172555.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="background">
+    <!-- <div class="movie-container">
+
+      <label>Pick a movie:</label>
+      <select id="movie">
+        <option value="150">Luca</option>
+        <option value="150">How To Train Your Dragon</option>
+        <option value="150">Toy Story</option>
+        <option value="150">The Croods</option>
+      </select>
+
+    </div> -->
+
+    <ul class="showcase" style="display: flex; flex-direction: column;">
+      <li>
+        <div class="seat-na"></div>
+        <small>N/A</small>
+
+        <div class="seat-s"></div>
+        <small>Selected</small>
+
+        <div class="seat-o"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="movie-screen">
+        <img src='https://www.nicepng.com/png/full/12-123267_cinematic-black-bars-png-monochrome.png' alt='screen' />
+      </div>
+
+
+      <div class="seat-container">
+        <div *ngFor="let seat of seats" class="seat" [ngClass]="seat.status" (click)="onSeatClick(seat)">
+          <span>{{ seat.row }}</span>
+          <span>{{ seat.column }}</span>
+        </div>
+      </div>
+
+      <h4 class='subtitle'>DIAMOND - ₹150</h4>
+
+    </div>
+
+    <div class="grid-buttons">
+      <div>
+        <button class="submit-button" (click)="onSubmit()">Book Selected Seats</button>
+      </div>
+      <div>
+        <button class="payment-button" (click)="onpayment()">Direct to payment</button>
+      </div>
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,47 @@
+<div>
+  <div>
+    <h1 class="MovieName"> MOVIES NOW PLAYING </h1>
+  </div>
+</div>
+
+<div class="movies">
+
+  <div class="grid-container" *ngFor="let MoviesNowShowing of movieList1">
+
+    <div class="column">
+      <div class="zoom">
+        <a routerLink="/Home/{{MoviesNowShowing.link}}">
+          <img src={{MoviesNowShowing.pic}}>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+
+<div>
+  <div>
+    <h1 class="MovieNameUC"> UPCOMING MOVIES </h1>
+  </div>
+</div>
+
+<div class="movies">
+  
+  <div class="grid-container" *ngFor="let movieUpcoming of movieList2">
+
+    <div class="column">
+      <div class="zoom">
+        <a routerLink="/Home/{{movieUpcoming.link}}">
+          <img src={{movieUpcoming.pic}}>
+        </a>
+      </div>
+    </div>
+
+    <div class="addmovie">
+      <a routerLink="/AddMovie"> <i class="fa fa-plus"></i> </a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="abc">
+
+  <body>
+
+    <div class="login-form">
+      <fieldset>
+        <legend>WELCOME</legend>
+
+        <form class="container" [formGroup]="loginForm" (ngSubmit)="login()">
+
+          <div class="form-control">
+            <label for="Email"></label>
+            <input type="email" name="email" placeholder="Email" formControlName="email">
+          </div>
+
+          <div class="error" *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+            <small *ngIf="loginForm.controls['email'].errors?.['required']">Please Enter Email ID</small>
+            <small *ngIf="loginForm.controls['email'].errors?.['pattern']">Invalid Email ID</small>
+          </div>
+
+          <div class="form-control">
+            <label for="Password"></label>
+            <input type="password" name="password" placeholder="Password" formControlName="password">
+          </div>
+
+          <div class="error" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+            <small *ngIf="loginForm.controls['password'].errors?.['required']">Please Enter Password</small>
+            <small *ngIf="loginForm.controls['password'].errors?.['pattern']">Invalid Password</small>
+          </div>
+
+          <button class="BUTTON" [disabled]="!loginForm.valid">Login</button>
+
+          <a class="forgotpass" routerLink="#">
+            <p>Forgot Password?</p>
+          </a>
+
+          <hr class="hrtag">
+
+          <p class="signup"> Don't have an account? <a class="forgotpass" routerLink="/Register">Signup</a></p>
+
+        </form>
+      </fieldset>
+    </div>
+
+  </body>
+
+</div>

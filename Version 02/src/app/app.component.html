@@ -1,0 +1,32 @@
+<!-- <nav class="nav">
+  <a routerLink="Home">Home</a>
+  <a routerLink="Login">Login</a>
+  <a routerLink="Register">Register</a>
+  <a routerLink="Product">Product</a>
+  <a routerLink="ContactUs">ContactUs</a>
+</nav> -->
+
+<body>
+
+  <header style="background-color: Red; height: 100px; width: 100%; Padding-top: 5px">
+    <strong>
+      <a routerLink="/Home">
+        <h2 style="font-size:35px; color:Black; text-align: center;">MOVIE GRIP</h2>
+      </a>
+    </strong>
+  </header>
+
+  <ul>
+    <li><a routerLink="/">HOME</a></li>
+    <li><a routerLink="/Theatre">THEATRE</a></li>
+    <li><a routerLink="/ContactUs">CONTACT US</a></li>
+    <li><a id="Login" routerLink="/Login" *ngIf="!slogin.islogin()">LOGIN</a></li>
+    <li><a *ngIf="slogin.islogin()" (click)="logout()">LOGOUT</a></li>
+    <li><p> {{slogin.getname()["username"]}} </p> </li>
+  </ul>
+
+  <div class="tabs">
+    <router-outlet></router-outlet>
+  </div>
+
+</body>

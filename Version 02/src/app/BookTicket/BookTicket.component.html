@@ -1,0 +1,84 @@
+<head>
+  <title>MOVIE TICKET BOOKING</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3172/3172555.png" type="image/x-icon">
+</head>
+
+<body background="https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg">
+
+
+
+  <!-- <header style="background-color: Red; height: 100px; width: 100%; Padding-top: 5px;">
+    <strong>
+      <h2 style="font-size:35px; color:Black; text-align: center;">MOVIE GRIP</h2>
+    </strong>
+  </header>
+
+  <ul>
+    <li><a routerLink="/">HOME</a></li>
+    <li><a routerLink="/Theatre">THEATRE</a></li>
+    <li><a routerLink="/ContactUs">CONTACT US</a></li>
+    <li><a routerLink="/Login">LOGIN</a></li>
+  </ul> -->
+
+  <div class="container">
+
+    <fieldset>
+      <legend>
+        <h2 style="color:rgb(254, 254, 255);">BOOKING PAGE</h2>
+      </legend>
+      <table>
+        <tr>
+          <td>
+
+            &nbsp;&nbsp;<img
+              src="https://featuredanimation.com/wp-content/uploads/2021/06/Luca-waving-half-under-water-Pixar-Movie-Poster-2021.jpg"
+              width=80 height=110>
+          </td>
+          <td>
+            &nbsp;&nbsp;<img
+              src="https://imgix.ranker.com/user_node_img/585/11694849/original/11694849-photo-u23?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"
+              width=80 height=110>
+          </td>
+          <td>
+            &nbsp;&nbsp;<img
+              src="https://imgix.ranker.com/user_node_img/114/2268400/original/2268400-photo-u63?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375"
+              width=80 height=110>
+          </td>
+          <td>
+            &nbsp;&nbsp;<img
+              src="https://m.media-amazon.com/images/M/MV5BNGU1NGNiYzYtMTQ2Ni00M2ZlLTg0N2QtMDFhMzNjNzcyMGYyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+              width=80 height=110>
+          </td>
+        </tr>
+      </table>
+
+      <form [formGroup]="bookTicket" (ngSubmit)="ticket()">
+
+        <h4 style="color:Orange;">Choose a Movie</h4>
+        <label for="movie"></label>
+        <select id="movie" name="movie" formControlName="movie_selection"
+          style="border-radius: 12px; height: 23px; width: 200px; padding-left: 5px;">
+
+          <option value="" disabled selected hidden>Select a Movie</option>
+          <option value="Luca">Luca</option>
+          <option value="How to train your dragon">How to train your dragon</option>
+          <option value="Toy story">Toy story</option>
+          <option value="The croods">The croods</option>
+        </select>
+
+        <h4 style="color:Pink;">Type show Date & Time</h4>
+        <input type="date" max="2023-04-05" min="2023-03-29" id="moviedate" name="movie" formControlName="date"
+          style="border-radius: 10px; height: 25px; margin-bottom: 3px; padding-left: 5px;">
+
+        <input type="time" id="movie_time" name="movie_time" formControlName="slot"
+          style="border-radius: 10px; height: 25px; padding-left: 5px;">
+
+        <h4 style="color:yellowgreen;">Click Here To Select The Seats</h4>
+
+        <button class="BUTTON" [disabled]="!bookTicket.valid">Book Seat</button>
+
+      </form>
+
+    </fieldset>
+  </div>
+</body>

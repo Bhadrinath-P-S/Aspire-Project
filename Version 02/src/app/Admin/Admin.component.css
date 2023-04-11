@@ -1,0 +1,62 @@
+body {
+  background: url("https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.movieName {
+  color: cyan;
+  margin-left: 20px;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.movieName:hover {
+  color: red;
+}
+
+.movieNameUC {
+  color: cyan;
+  margin-left: 20px;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.MovieNameUC:hover {
+  color: red;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+  row-gap: 20px;
+  padding-left: 20px;
+}
+
+.grid-container {
+  float: left;
+}
+
+.zoom img {
+  height: 480px;
+  width: 350px;
+}
+
+.sticky-container~.zoom img {
+  display: none;
+}
+
+.addmovie {
+  border: white 2px solid;
+  height: 480px;
+  width: 350px;
+}
+
+i {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

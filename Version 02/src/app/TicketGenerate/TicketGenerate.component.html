@@ -1,0 +1,43 @@
+<!-- <div *ngFor="let payment of payment" style="background-color: red;">
+
+  <p style="color: white;"> {{payment.id}} {{payment.name}} {{payment.ccv}} {{payment.month_and_year}}
+    {{payment.cardnumber}} </p>
+
+</div>
+
+
+
+
+
+<div *ngFor="let movie of movie" style="background-color: red;">
+
+  <p style="color: white;"> {{theatre.theatre}} {{theatre.city}} {{theatre.state}} {{theatre.id}}</p>
+
+</div>
+
+
+
+
+
+<div *ngFor="let theatre of theatre" style="background-color: red;">
+
+  <p style="color: white;"> {{movie.movie_selection}} {{movie.date}} {{movie.slot}} {{movie.id}} </p>
+
+</div>
+
+
+
+
+<div *ngFor="let seat of seat" style="background-color: red;">
+  <p style="color: white;"> {{seat.status}} {{seat.row}} {{seat.column}} {{seat.id}} </p>
+
+</div> -->
+<div class="ticket">
+  <fieldset style="background-color: white">
+
+  <div *ngFor="let payment of payment">
+    <label> Name : {{payment.name}}</label>
+
+  </div>
+</fieldset>
+</div>

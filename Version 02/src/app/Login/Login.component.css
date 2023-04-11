@@ -1,0 +1,111 @@
+body {
+  background: url("https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: -6px;
+  overflow: hidden;
+  background-color: rgb(24, 24, 24);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 7px 150px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(42, 42, 42);
+  color: wheat;
+}
+
+.login-form {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 79vh;
+}
+
+input[type="email"],
+input[type="password"] {
+  border-radius: 6px;
+  height: 28px;
+  width: 285px;
+  padding-left: 10px;
+}
+
+.form-control {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  margin-top: 10%;
+  background-color: rgba(14, 10, 10, 0.886);
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.916);
+  box-shadow: 0 6px 10px 0 rgba(241, 8, 8, 0.269), 0 8px 22px 0 rgba(211, 9, 9, 0.26);
+  width: 23.5%;
+  height: max-content;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.BUTTON {
+  /* background-color: rgb(255, 255, 255);
+  color: black; */
+  border: 1px solid rgba(254, 4, 4, 0.491);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 12px;
+  margin: 10px 0px 10px 41%;
+}
+
+.BUTTON:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+p {
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.forgotpass {
+  text-decoration: none;
+  font-size: medium;
+  color: white;
+}
+
+.forgotpass:hover {
+  color: blue;
+}
+
+.signup {
+  margin-bottom: 10px;
+}
+
+.error {
+  font-size: 18px;
+  color: white;
+  margin: 2px 0px 2px 38px;
+  width: fit-content;
+}
