@@ -1,0 +1,301 @@
+<html>
+
+<style>
+    h1 {
+        position: relative;
+        left: 650px;
+        top: 50px;
+        color: floralwhite;
+    }
+
+    form {
+        position: absolute;
+        left: 470px;
+    }
+
+    label {
+        position: relative;
+        color: white;
+    }
+
+    div {
+        position: relative;
+        font-size: 17;
+        color: rgb(249, 247, 247);
+    }
+
+    fieldset {
+        display: flex;
+        width: 550px;
+        height: 400px;
+        padding: 0px;
+        background-color: rgba(14, 10, 10, 0.886);
+        border-radius: 10px;
+        border-color: rgba(242, 8, 8, 0.916);
+        box-shadow: 0 6px 10px 0 rgba(241, 8, 8, 0.269), 0 8px 22px 0 rgba(211, 9, 9, 0.26);
+    }
+
+    legend {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 3;
+    }
+
+    input[type=submit],
+    input[type=text],
+    input[type=date],
+    input[type=textarea],
+    input[type=option] input[type=password] {
+        border-radius: 5px;
+    }
+
+    .BUTTON {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border: 1px solid rgba(254, 4, 4, 0.491);
+        border-radius: 11px;
+        cursor: pointer;
+        height: 25;
+        width: 100;
+    }
+
+    .BUTTON:hover {
+        background-color: #f44336;
+        color: white;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3172/3172555.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header style="background-color:Red; height:100px; width:100%; Padding-top:5px">
+
+        <center><strong>
+                <h2 style="font-size:35px; color:Black;">MOVIE GRIP</h2>
+            </strong>
+        </center>
+
+        <marquee><strong>
+                <h11 style="color:White; ">Grab The Movies You Want !!!</h11>
+            </strong></marquee>
+            <hr style="position: relative; top: -9px;">
+
+        <center>
+
+            <body
+                background="https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg">
+        </center>
+
+        <div>
+            <form style="top: 90px; display: flex;" name="form" action="Login.html" method="post"
+                onsubmit="return validate()">
+                <fieldset>
+                    <legend><B> REGISTRATION</B></legend>
+                    <br>
+
+                    <table style="position: relative; left:70; color: white;">
+                        <tr>
+                            <td style="width: 180;"><label for="name">Name</label></td>
+                            <td><select Style="border-radius: 6px; height: 21; position: relative; top:1">
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Ms.">Mrs.</option>
+                                </select>
+                                <input type="text" name="Name" id="" placeholder="Enter your Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Email ID">Email ID</label></td>
+                            <td><input type="text" name="Email" id="" placeholder="Enter your Email ID"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="New Password">New Password</label></td>
+                            <td><input type="password" name="password" id="" placeholder="Enter your New Password"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Rewrite Password">Confirm Password</label></td>
+                            <td><input type="password" name="Repass" id="" placeholder="Enter Confirm Password"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Phone Number">Phone Number</label></td>
+                            <td><input type="text" name="Phone" id="" placeholder="Enter your phone number"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="State">State</label></td>
+                            <td><select name="State" id="" style="width: 175px; border-radius: 5px;" required>
+                                    <option value="Tamilnadu">Tamilnadu</option>
+                                    <option value="" disabled selected hidden>Enter Your State</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="City">City:</label></td>
+                            <td><select id="City" style="width: 175px; border-radius: 5px;">
+                                    <option value="Salem">Salem</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Tiruchy">Tiruchy</option>
+                                    <option value="" disabled selected hidden>Enter Your City</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td style="position: relative; left:-4;"><input type="checkbox" value="Terms & Conditions">
+                                <label style="color:white ;">Terms & Conditions</label>
+                            </td>
+                            <td><button class="BUTTON">Register Now</button></td>
+                        </tr>
+
+                    </table>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                </fieldset>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            function validate() {
+                var Name = document.forms["form"]["Name"].value;
+                var Phone = document.forms["form"]["Phone"].value;
+                var Email = document.forms["form"]["Email"].value;
+                var pass = document.forms["form"]["password"].value;
+                var repass = document.forms["form"]["Repass"].value;
+                if (Name == "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+
+                if (!isNaN(Name)) {
+                    alert("Name should be in Characters Only");
+                    return false;
+                }
+                
+                if (/\d/.test(Name)) {
+                    alert("Your name should not be in number");
+                    return false;
+                }
+
+                var at = Email.indexOf("@");
+                var dot = Email.lastIndexOf(".");
+                if (at < 1 || dot < at + 2 || dot + 2 >= Email.length) {
+                    alert("Please enter a valid email ID.");
+                    return false;
+                }
+
+                if (pass.length < 5) {
+                    alert("The password must contain atleast 5 characters");
+                    return false;
+                }
+
+                if (Phone == "") {
+                    alert("Please enter your phone number.");
+                    return false;
+                }
+
+                if (repass != pass) {
+                    alert("Your password does not match.");
+                    return false;
+                }
+
+                if (isNaN(Phone)) {
+                    alert("Mobile number must be in numbers.");
+                    return false;
+                }
+
+                if (Phone.length != 10) {
+                    alert("Invalid Phone number.");
+                    return false;
+                }
+                else{
+                    alert("Registered Successfully.");
+                }
+            }
+        </script>
+
+        <table style="border-radius: 10px;
+        position: absolute;
+        right: 80px;
+        border: 2px solid rgba(250, 4, 4, 0.865);
+        box-shadow: 0 6px 10px 0 rgba(241, 8, 8, 0.269), 0 8px 22px 0 rgba(211, 9, 9, 0.26);
+        color: rgb(247, 242, 242);
+        letter-spacing: 3;
+        display: flex;
+        top: 170px;">
+            <tr>
+                <th colspan="2">
+                    <center>MOVIES UPCOMING</center>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://m.media-amazon.com/images/I/71YwxjfhEiL._AC_SL1303_.jpg" width="190" height="255">
+                </td>
+                <td>
+                    <img src="http://www.impawards.com/2017/posters/coco_ver13.jpg" width="190" height="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://pbs.twimg.com/media/Ex0A5HgUcAcuxm2.jpg" width="190" height="255">
+                </td>
+                <td>
+                    <img src="https://i.pinimg.com/originals/e4/bb/97/e4bb97ed99a32328cbf3a9517845abb8.jpg" width="190"
+                        height="255">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+        </table>
+
+        <table style="border-radius: 
+        10px;position: absolute;
+        left: 57px;
+        border: 2px solid rgba(233, 6, 6, 0.925);
+        box-shadow: 0 6px 10px 0 rgba(241, 8, 8, 0.269), 0 8px 22px 0 rgba(211, 9, 9, 0.26);
+        color: rgb(247, 242, 242);
+        letter-spacing: 3;
+        display: flex;
+        top: 170px;">
+            <tr>
+                <th colspan="2">
+                    <center>MOVIES NOW STREAMING</center>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://www.madisonlibrary.org/sites/default/files/2022-04/Luca.jpg" width="190"
+                        height="255">
+                </td>
+                <td>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTcyOTc2OTA1Ml5BMl5BanBnXkFtZTcwOTI1MjkzOQ@@._V1_.jpg"
+                        width="190" height="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTlkZjM1MDctZTZlOC00NDQwLTg3ZGEtNTJhMWQ2YWIxNGViXkEyXkFqcGdeQXVyMjQ5MjYwNDE@._V1_.jpg"
+                        width="190" height="255">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/aboutdisney_411/images/c/c9/Toy_Story_4.png/revision/latest?cb=20200524145614"
+                        width="190" height="255">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+        </table>
+</body>
+
+</html>
